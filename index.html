@@ -128,14 +128,12 @@ min-height:18px;margin-top:9px;color:var(--muted);
 font:11px "DM Mono",monospace
 }
 
-/* NARRATIVE - NEW */
+/* NARRATIVE */
 .narrative{
 background:#101010;
 border-block:1px solid var(--line);
 }
-.narrative-content{
-max-width:850px;
-}
+.narrative-content{max-width:850px}
 .narrative-content p{
 color:var(--muted);
 font-size:14px;
@@ -176,10 +174,8 @@ line-height:1.9;
 margin-top:30px;
 }
 
-/* ROADMAP - NEW */
-.roadmap{
-background:var(--bg);
-}
+/* ROADMAP */
+.roadmap{background:var(--bg)}
 .roadmap-list{
 max-width:850px;
 display:grid;
@@ -228,6 +224,91 @@ margin-top:22px;
 max-width:700px;
 }
 
+/* FAQ SECTION - NEW */
+.faq-section{
+background:#0c0c0e;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
+}
+.faq-container{
+max-width:850px;
+}
+.faq-header{
+margin-bottom:30px;
+}
+.faq-header h2{
+font-size:clamp(46px,6vw,68px);
+line-height:.95;
+margin-top:12px;
+}
+.faq-list{
+display:flex;
+flex-direction:column;
+gap:13px;
+}
+.faq-item{
+background:#151518;
+border:1px solid #ffffff18;
+border-radius:20px;
+overflow:hidden;
+transition:border-color .25s ease;
+}
+.faq-item[open]{
+border-color:#ff6a1a80;
+}
+.faq-item summary{
+list-style:none;
+cursor:pointer;
+padding:23px 25px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+font-size:15px;
+font-weight:800;
+line-height:1.6;
+}
+.faq-item summary::-webkit-details-marker{
+display:none;
+}
+.faq-question{
+flex:1;
+}
+.faq-icon{
+width:28px;
+height:28px;
+flex-shrink:0;
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--orange);
+font-size:25px;
+font-weight:500;
+transition:transform .25s ease;
+}
+.faq-icon::before{
+content:"+";
+}
+.faq-item[open] .faq-icon{
+transform:rotate(45deg);
+}
+.faq-answer{
+padding:0 25px 23px;
+color:var(--muted);
+font-size:13px;
+line-height:1.9;
+}
+.faq-answer p{
+max-width:700px;
+}
+.faq-answer strong{
+color:var(--white);
+}
+.faq-answer a{
+color:var(--orange);
+text-decoration:underline;
+}
+
 .community{
 background:radial-gradient(ellipse at center,#ff6a1a1c,transparent 68%);
 text-align:center;padding:90px 0
@@ -255,6 +336,7 @@ gap:18px;flex-wrap:wrap
 .info-grid{grid-template-columns:1fr 1fr}
 .roadmap-list{grid-template-columns:1fr}
 }
+
 @media(max-width:480px){
 nav{height:66px}
 .brand{font-size:13px}
@@ -264,6 +346,14 @@ nav{height:66px}
 .ca-box button{padding:15px}
 .community h2{font-size:66px}
 .vision-grid{grid-template-columns:1fr}
+.faq-item summary{
+padding:19px 17px;
+font-size:13px;
+}
+.faq-answer{
+padding:0 17px 19px;
+font-size:12px;
+}
 }
 </style>
 </head>
@@ -279,10 +369,11 @@ nav{height:66px}
 <a href="#narrative">Story</a>
 <a href="#roadmap">Roadmap</a>
 <a href="#token">Contract</a>
+<a href="#faq">FAQ</a>
 <a href="#community">Community</a>
 </div>
 
-<a class="button" href="https://t.me/XCAPY_OG" target="_blank">JOIN TELEGRAM ↗</a>
+<a class="button" href="https://t.me/XCAPY_OG" target="_blank" rel="noopener">JOIN TELEGRAM ↗</a>
 </nav>
 </header>
 
@@ -301,8 +392,8 @@ to Solana meme culture.
 </p>
 
 <div class="actions">
-<a class="button" href="https://t.me/XCAPY_OG" target="_blank">JOIN THE COMMUNITY ↗</a>
-<a class="button outline" href="https://x.com/xcapyog" target="_blank">FOLLOW ON X ↗</a>
+<a class="button" href="https://t.me/XCAPY_OG" target="_blank" rel="noopener">JOIN THE COMMUNITY ↗</a>
+<a class="button outline" href="https://x.com/xcapyog" target="_blank" rel="noopener">FOLLOW ON X ↗</a>
 </div>
 
 <div class="mono">SOLANA · COMMUNITY · MEME CULTURE</div>
@@ -360,7 +451,7 @@ and a community creating its own culture.
 </div>
 </section>
 
-<!-- NEW NARRATIVE SECTION -->
+<!-- NARRATIVE -->
 <section class="narrative" id="narrative">
 <div class="wrap">
 
@@ -402,9 +493,7 @@ means more than just holding a token.
 
 <div class="vision-item">
 <h3>🦫 Build a community</h3>
-<p>
-Build a welcoming, active and united community that grows together.
-</p>
+<p>Build a welcoming, active and united community that grows together.</p>
 </div>
 
 <div class="vision-item">
@@ -452,9 +541,7 @@ We're here to build, create, laugh, grow and see how far we can take
 this together.
 </p>
 
-<p>
-A token can be launched in seconds. A strong community takes time to build.
-</p>
+<p>A token can be launched in seconds. A strong community takes time to build.</p>
 
 <p>
 If you're tired of disposable projects and want to be part of something
@@ -469,7 +556,7 @@ ONE CAPYBARA. ONE COMMUNITY. ONE JOURNEY.
 </div>
 </section>
 
-<!-- NEW ROADMAP SECTION -->
+<!-- ROADMAP -->
 <section class="roadmap" id="roadmap">
 <div class="wrap">
 
@@ -542,6 +629,7 @@ outcomes. Milestones may evolve as the community grows and opportunities develop
 </div>
 </section>
 
+<!-- CONTRACT -->
 <section class="wrap" id="token">
 <div class="section-head">
 <div class="mono">04 / OFFICIAL CONTRACT</div>
@@ -586,6 +674,130 @@ Tap COPY CA to copy the contract address.
 </div>
 </section>
 
+<!-- FAQ SECTION -->
+<section class="faq-section" id="faq">
+<div class="wrap faq-container">
+
+<div class="faq-header">
+<div class="mono">05 / FAQ</div>
+<h2>QUESTIONS,<br><span>ANSWERED.</span></h2>
+<p class="copy">
+Everything you need to know about the Anonymous Capybara.
+Still curious? Join our community.
+</p>
+</div>
+
+<div class="faq-list">
+
+<details class="faq-item">
+<summary>
+<span class="faq-question">What is $XCAPY?</span>
+<span class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+$XCAPY is the Anonymous Capybara — a community-driven memecoin
+built around a simple idea: creating something that lasts beyond
+the usual memecoin hype cycle. We're here to build a welcoming
+community, grow together, value our holders and enjoy the journey.
+</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>
+<span class="faq-question">Has $XCAPY launched?</span>
+<span class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+$XCAPY has been launched. Follow our official social
+channels for verified announcements and updates. Always make sure
+you're interacting with the official project.
+</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>
+<span class="faq-question">Where will the contract address be published?</span>
+<span class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+The official contract address is published on this website
+and will also be shared through our verified X account and
+Telegram community. Always verify the address before making
+any transaction.
+</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>
+<span class="faq-question">How do I buy $XCAPY?</span>
+<span class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+Once launched, you will be able to purchase $XCAPY through
+a supported Solana decentralized exchange. We'll publish
+a simple buying guide and share the official contract address
+through our community channels.
+</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>
+<span class="faq-question">Does $XCAPY guarantee profits?</span>
+<span class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+Absolutely not. $XCAPY does not guarantee profits or promise
+overnight riches. Cryptocurrency is highly volatile, and you
+should only invest what you can afford to lose. Our focus is
+building a genuine community, not making unrealistic financial
+promises.
+</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>
+<span class="faq-question">Will $XCAPY have utility?</span>
+<span class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+Our vision goes beyond being just another memecoin. We aim to
+develop an ecosystem where long-term holders can benefit from
+meaningful rewards as the project grows. More details will be
+announced as development progresses.
+</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary>
+<span class="faq-question">Which blockchain is $XCAPY on?</span>
+<span class="faq-icon"></span>
+</summary>
+<div class="faq-answer">
+<p>
+$XCAPY is built on the <strong>Solana blockchain</strong>,
+taking advantage of its fast transactions and low transaction
+costs. 🦫
+</p>
+</div>
+</details>
+
+</div>
+</div>
+</section>
+
+<!-- COMMUNITY -->
 <section class="community" id="community">
 <div class="wrap">
 <div class="mono">THE COMMUNITY IS OPEN</div>
@@ -595,8 +807,8 @@ Tap COPY CA to copy the contract address.
 <p>Follow the official channels and be part of the movement.</p>
 
 <div class="actions" style="justify-content:center">
-<a class="button" href="https://t.me/XCAPY_OG" target="_blank">TELEGRAM ↗</a>
-<a class="button outline" href="https://x.com/xcapyog" target="_blank">FOLLOW ON X ↗</a>
+<a class="button" href="https://t.me/XCAPY_OG" target="_blank" rel="noopener">TELEGRAM ↗</a>
+<a class="button outline" href="https://x.com/xcapyog" target="_blank" rel="noopener">FOLLOW ON X ↗</a>
 </div>
 </div>
 </section>
@@ -624,7 +836,7 @@ copyButton.addEventListener("click", async () => {
       const field = document.createElement("textarea");
       field.value = ca;
       field.style.position = "fixed";
-      field.style.opacity = "0";
+field.style.opacity = "0";
       document.body.appendChild(field);
       field.focus();
       field.select();
@@ -651,3 +863,5 @@ copyButton.addEventListener("click", async () => {
 
 </body>
 </html>
+
+     
