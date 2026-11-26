@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,6 +128,106 @@ min-height:18px;margin-top:9px;color:var(--muted);
 font:11px "DM Mono",monospace
 }
 
+/* NARRATIVE - NEW */
+.narrative{
+background:#101010;
+border-block:1px solid var(--line);
+}
+.narrative-content{
+max-width:850px;
+}
+.narrative-content p{
+color:var(--muted);
+font-size:14px;
+line-height:2;
+margin-bottom:18px;
+}
+.narrative-content h3{
+font-size:32px;
+margin:35px 0 18px;
+}
+.vision-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+margin:25px 0 35px;
+}
+.vision-item{
+background:var(--panel);
+border:1px solid var(--line);
+padding:22px;
+}
+.vision-item h3{
+font-size:25px;
+margin:0 0 10px;
+}
+.vision-item p{
+font-size:12px;
+line-height:1.8;
+margin:0;
+}
+.narrative-ending{
+border-left:3px solid var(--orange);
+padding:20px 24px;
+background:#ff6a1a0b;
+color:var(--white);
+font-weight:800;
+line-height:1.9;
+margin-top:30px;
+}
+
+/* ROADMAP - NEW */
+.roadmap{
+background:var(--bg);
+}
+.roadmap-list{
+max-width:850px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+.roadmap-item{
+background:var(--panel);
+border:1px solid var(--line);
+padding:25px;
+position:relative;
+}
+.roadmap-item .phase{
+font:11px "DM Mono",monospace;
+letter-spacing:2px;
+color:var(--orange);
+}
+.roadmap-item h3{
+font-size:30px;
+margin:13px 0;
+}
+.roadmap-item p{
+font-size:12px;
+color:var(--muted);
+line-height:1.9;
+}
+.roadmap-item ul{
+list-style:none;
+margin-top:15px;
+}
+.roadmap-item li{
+font-size:12px;
+color:var(--muted);
+padding:9px 0;
+border-top:1px solid var(--line);
+}
+.roadmap-item li::before{
+content:"✦ ";
+color:var(--orange);
+}
+.roadmap-note{
+color:var(--muted);
+font-size:11px;
+line-height:1.8;
+margin-top:22px;
+max-width:700px;
+}
+
 .community{
 background:radial-gradient(ellipse at center,#ff6a1a1c,transparent 68%);
 text-align:center;padding:90px 0
@@ -152,6 +253,7 @@ gap:18px;flex-wrap:wrap
 .hero-image{max-width:560px;margin:auto}
 .about{grid-template-columns:1fr;gap:18px}
 .info-grid{grid-template-columns:1fr 1fr}
+.roadmap-list{grid-template-columns:1fr}
 }
 @media(max-width:480px){
 nav{height:66px}
@@ -161,6 +263,7 @@ nav{height:66px}
 .ca-box{flex-direction:column}
 .ca-box button{padding:15px}
 .community h2{font-size:66px}
+.vision-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -173,6 +276,8 @@ nav{height:66px}
 
 <div class="navlinks">
 <a href="#about">About</a>
+<a href="#narrative">Story</a>
+<a href="#roadmap">Roadmap</a>
 <a href="#token">Contract</a>
 <a href="#community">Community</a>
 </div>
@@ -255,9 +360,191 @@ and a community creating its own culture.
 </div>
 </section>
 
+<!-- NEW NARRATIVE SECTION -->
+<section class="narrative" id="narrative">
+<div class="wrap">
+
+<div class="section-head">
+<div class="mono">02 / OUR STORY</div>
+<h2>MORE THAN A MEME.<br><span>A COMMUNITY.</span></h2>
+<p>More than just another memecoin. A community worth building.</p>
+</div>
+
+<div class="narrative-content">
+
+<p>🦫 Welcome to $XCAPY - The Anonymous Capybara.</p>
+
+<p>Let's be honest. Crypto has become exhausting.</p>
+
+<p>
+Every day, countless tokens are launched, hyped up for a few hours,
+exploited, and abandoned. Rug pulls, endless extraction, fake promises
+and communities left with nothing.
+</p>
+
+<p>We're tired of seeing it.</p>
+
+<p>
+$XCAPY was born from a different idea. We don't want to launch another
+token just to make a quick buck and disappear. We want to build something
+that lasts.
+</p>
+
+<p>
+We want to grow a real community where people are welcome, where holders
+matter, where everyone can contribute, and where being part of the project
+means more than just holding a token.
+</p>
+
+<h3>OUR VISION</h3>
+
+<div class="vision-grid">
+
+<div class="vision-item">
+<h3>🦫 Build a community</h3>
+<p>
+Build a welcoming, active and united community that grows together.
+</p>
+</div>
+
+<div class="vision-item">
+<h3>🌱 Think long-term</h3>
+<p>
+We want $XCAPY to live beyond the usual few-hour memecoin cycle.
+Growth takes time, consistency and trust.
+</p>
+</div>
+
+<div class="vision-item">
+<h3>💎 Value our holders</h3>
+<p>
+We want long-term holders to share in the project's growth and benefit
+from meaningful rewards as the ecosystem develops.
+</p>
+</div>
+
+<div class="vision-item">
+<h3>🤝 Build trust</h3>
+<p>
+No rug-pull mentality, no intentional exploitation of our own community.
+We want our actions to speak louder than promises.
+</p>
+</div>
+
+<div class="vision-item">
+<h3>😂 Never forget the memes</h3>
+<p>
+At the heart of it all is our Anonymous Capybara - calm, mysterious,
+unbothered by the chaos of crypto. Because sometimes the best way
+to survive this market is to just be a capybara.
+</p>
+</div>
+
+</div>
+
+<p>
+We're not here to promise overnight riches or pretend we can change
+crypto in a day.
+</p>
+
+<p>
+We're here to build, create, laugh, grow and see how far we can take
+this together.
+</p>
+
+<p>
+A token can be launched in seconds. A strong community takes time to build.
+</p>
+
+<p>
+If you're tired of disposable projects and want to be part of something
+that actually aims to grow, you're welcome here.
+</p>
+
+<div class="narrative-ending">
+ONE CAPYBARA. ONE COMMUNITY. ONE JOURNEY.
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- NEW ROADMAP SECTION -->
+<section class="roadmap" id="roadmap">
+<div class="wrap">
+
+<div class="section-head">
+<div class="mono">03 / THE JOURNEY</div>
+<h2>THE <span>ROADMAP.</span></h2>
+<p>
+A long-term vision built around community, consistency and growth.
+One step at a time.
+</p>
+</div>
+
+<div class="roadmap-list">
+
+<div class="roadmap-item">
+<div class="phase">PHASE 01 / THE BEGINNING</div>
+<h3>THE ORIGIN</h3>
+<p>Every journey starts somewhere. This is where the Anonymous Capybara story begins.</p>
+<ul>
+<li>Launch the $XCAPY identity</li>
+<li>Establish official social channels</li>
+<li>Introduce the project to Solana</li>
+<li>Welcome the first community members</li>
+</ul>
+</div>
+
+<div class="roadmap-item">
+<div class="phase">PHASE 02 / COMMUNITY</div>
+<h3>GROW TOGETHER</h3>
+<p>Build a strong foundation through participation, creativity and community engagement.</p>
+<ul>
+<li>Grow the Telegram and X communities</li>
+<li>Community campaigns and meme contests</li>
+<li>Increase project awareness</li>
+<li>Encourage community-led initiatives</li>
+</ul>
+</div>
+
+<div class="roadmap-item">
+<div class="phase">PHASE 03 / DEVELOPMENT</div>
+<h3>BUILD THE ECOSYSTEM</h3>
+<p>Explore meaningful opportunities that can give the project room to grow.</p>
+<ul>
+<li>Explore community rewards</li>
+<li>Develop new community initiatives</li>
+<li>Explore partnerships and collaborations</li>
+<li>Expand the Anonymous Capybara brand</li>
+</ul>
+</div>
+
+<div class="roadmap-item">
+<div class="phase">PHASE 04 / LONG-TERM</div>
+<h3>THE BIGGER VISION</h3>
+<p>Keep building beyond the usual memecoin cycle and create something the community can be proud of.</p>
+<ul>
+<li>Continue expanding the ecosystem</li>
+<li>Explore sustainable growth opportunities</li>
+<li>Strengthen community participation</li>
+<li>Keep creating new possibilities together</li>
+</ul>
+</div>
+
+</div>
+
+<p class="roadmap-note">
+Our roadmap represents our vision and planned direction, not guaranteed
+outcomes. Milestones may evolve as the community grows and opportunities develop.
+</p>
+
+</div>
+</section>
+
 <section class="wrap" id="token">
 <div class="section-head">
-<div class="mono">02 / OFFICIAL CONTRACT</div>
+<div class="mono">04 / OFFICIAL CONTRACT</div>
 <h2>CHECK THE <span>CA.</span></h2>
 <p>
 Always verify the contract address before interacting
